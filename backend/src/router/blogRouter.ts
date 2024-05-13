@@ -15,6 +15,6 @@ blogRoutes.get('/all', getAllBlogs);
 
 blogRoutes.get('/', authmiddleware, getAllBlogsOfUser);
 blogRoutes.post('/', authmiddleware, createBlog);
-blogRoutes.get('/:id', authmiddleware, getBlogById);
+blogRoutes.get('/:id', getBlogById);
 blogRoutes.put('/:id', authmiddleware, updateBlog);
 blogRoutes.delete('/:id', authmiddleware, deleteBlog);

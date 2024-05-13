@@ -6,6 +6,7 @@ import Main from './pages/Main';
 import BlogCreate from './pages/BlogCreate';
 
 export const BACK_URL = 'https://backend.anujsd.workers.dev';
+// export const BACK_URL = 'http://127.0.0.1:8787';
 function App() {
   return (
     <>

@@ -75,10 +75,10 @@ export const getBlogById = async (c: Context) => {
     }).$extends(withAccelerate());
 
     const postId = c.req.param('id');
+    console.log(postId);
     const post = await prisma.post.findFirst({
       where: {
         id: postId,
-        authorId: c.get('userId'),
       },
       select: {
         id: true,

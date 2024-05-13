@@ -5,11 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BACK_URL } from '../App';
 
 const Main = () => {
-  const token = localStorage.getItem('token');
   const navigator = useNavigate();
-  if (!token) {
-    navigator('/signup');
-  }
   const [allPosts, setAllPosts] = useState([]);
 
   const getAllPost = async () => {
@@ -18,6 +14,11 @@ const Main = () => {
     setAllPosts(res.data.posts);
   };
   useEffect(() => {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      navigator('/signup');
+    }
     getAllPost();
   }, []);
   return (

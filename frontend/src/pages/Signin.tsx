@@ -22,7 +22,7 @@ const Signin = () => {
 
       localStorage.setItem('token', res.data.token);
       navigator('/');
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (error.name === 'AxiosError') {
         alert(

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 
 const Appbar = () => {
+  const handleLogout = () => {
+    localStorage.clear();
+    alert('logout successfully');
+  };
   return (
     <div className='flex justify-between p-3 border-b-2 items-center'>
       <Link to='/'>Medium</Link>
@@ -11,7 +15,10 @@ const Appbar = () => {
         >
           Create Blog
         </Link>
-        <div className='relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600'>
+        <div
+          className='relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600'
+          onClick={handleLogout}
+        >
           <span className='font-medium text-gray-600 dark:text-gray-300'>
             JL
           </span>

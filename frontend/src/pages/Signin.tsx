@@ -67,7 +67,7 @@ const Signin = () => {
               className='bg-black text-white text-center py-2 rounded-md'
               onClick={handleSignin}
             >
-              Signup
+              Login
             </div>
           </div>
         </div>
